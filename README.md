@@ -12,3 +12,9 @@ to shut down and remove docker
 ```
 docker-compose down
 ```
+
+
+## Contributors
+
+* Smit Jiwani
+// add here
