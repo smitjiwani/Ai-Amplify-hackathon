@@ -1,2 +1,7 @@
 # Ai-Amplify-hackathon
-This repo is for a hackathon
+
+to start docker use
+
+```
+docker-compose up -d
+```
