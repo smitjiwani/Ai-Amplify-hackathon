@@ -10,5 +10,5 @@ to shut down and remove docker
 
 
 ```
-docker-compose down -d
+docker-compose down
 ```
