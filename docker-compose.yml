@@ -7,8 +7,13 @@ services:
      - '5000:5000'
   db:
     image: 'postgres'
-    ports:
-      - 4321:5432
+    # ports:
+    #   - 4321:5432
     environment:
       POSTGRES_PASSWORD: "password"
       POSTGRES_USER: 'username'
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
