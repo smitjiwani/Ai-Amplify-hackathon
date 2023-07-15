@@ -1,5 +1,15 @@
 # Ai-Amplify-hackathon
 
+## prequisites
+
+* node 20.4.0
+
+## initialize
+
+```
+npm install
+```
+
 to start docker use
 
 ```
@@ -19,3 +29,6 @@ docker-compose down
 * Smit Jiwani
 * Noor Chauhan
 * PRATHAMESH GATE
+* Himanshu Mishra
+* //Add here
+
