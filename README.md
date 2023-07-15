@@ -6,9 +6,9 @@
 
 ## initialize
 
-'''
+```
 npm install
-'''
+```
 
 to start docker use
 
