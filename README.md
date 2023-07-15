@@ -1,6 +1,6 @@
 # Ai-Amplify-hackathon
 
-##prequisites
+## prequisites
 * node 20.4.0
 
 to start docker use
