@@ -18,4 +18,5 @@ docker-compose down
 
 * Smit Jiwani
 * Noor Chauhan
+* Himanshu Mishra
 * //Add here
