@@ -27,7 +27,6 @@ docker-compose down
 ## Contributors
 
 * Smit Jiwani
-* Noor Chauhan
 * Prathamesh Gate
 * Himanshu Mishra
 * Ruturaj Chondekar
