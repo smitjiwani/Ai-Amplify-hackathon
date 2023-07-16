@@ -11,7 +11,7 @@ git clone https://github.com/smitjiwani/Ai-Amplify-hackathon
 
 ## initialize
 
-<sub>bash file(.sh) needed for initializing the docker for better developer experience.<sub/>
+> bash file(.sh) needed for initializing the docker for better developer experience.
 
 ```
 npm install
@@ -22,7 +22,7 @@ to start docker use
 ```
 docker-compose up -d
 ```
-** use the --build flag if you make changes to docker or server files to rebuild.
+> use the --build flag if you make changes to docker or server files to rebuild.
 
 Go to bash
 
