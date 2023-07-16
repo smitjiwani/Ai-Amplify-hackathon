@@ -11,7 +11,7 @@ git clone https://github.com/smitjiwani/Ai-Amplify-hackathon
 
 ## initialize
 
-bash file(.sh) needed for initializing the docker for better developer experience.
+<sub>bash file(.sh) needed for initializing the docker for better developer experience.<sub/>
 
 ```
 npm install
