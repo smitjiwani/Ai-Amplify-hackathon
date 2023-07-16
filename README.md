@@ -4,7 +4,14 @@
 
 * node 20.4.0
 
+## Clone your repo
+```
+git clone https://github.com/smitjiwani/Ai-Amplify-hackathon
+```
+
 ## initialize
+
+bash file(.sh) needed for initializing the docker for better developer experience.
 
 ```
 npm install
@@ -15,6 +22,7 @@ to start docker use
 ```
 docker-compose up -d
 ```
+** use the --build flag if you make changes to docker or server files to rebuild.
 
 Go to bash
 
@@ -34,9 +42,20 @@ Seed
 npm run seed
 ```
 
+Dev
+
+```
+npm run dev
+```
+
+Production
+
+```
+npm run build
+```
+
 
 to shut down and remove docker
-
 
 ```
 docker-compose down
