@@ -54,6 +54,7 @@ Production
 npm run build
 ```
 
+> frontend runs on ```localhost:5173``` and backend runs on ```localhost:5000```
 
 to shut down and remove docker
 
