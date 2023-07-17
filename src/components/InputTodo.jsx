@@ -8,14 +8,14 @@ function InputTodo() {
 
   const getTodo = async e => {
     e.preventDefault()
-    axios.get("http://localhost:5000/todos")
+    axios.get("/todos")
       .then(res => console.log(res))
       .catch(err => console.error(err))
   }
 
   const onSubmitForm = async e => {
     e.preventDefault()
-    axios.post("http://localhost:5000/todos", {description})
+    axios.post("/todos", {description})
       .then(res => console.log(res))
       .catch(err => console.error(err))
   }
