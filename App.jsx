@@ -12,13 +12,7 @@ function App() {
 
   return (
     <>
-
-      <Header/>
-
-      <Login/>
-    <Footer/>
-
-
+      App
     </>
   )
 }
