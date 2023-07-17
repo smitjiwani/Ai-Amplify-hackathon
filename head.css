@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: url('img/gym.jpg'); 
+}
+
+header {
+    background-color: black;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: flex-start;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+
+.logo{
+    margin-right: auto;
+}
+
+.logo img{
+    cursor: pointer;
+    width: 125px;
+    height: 100px;
+    filter: invert(100%); 
+}
+
+
+
+.navbar li{
+    display: inline-block;
+    padding: 25px 10px;
+}
+
+.navbar li a:hover{
+    color: grey;
+}
+
+li, a,  button{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+
+header button{
+    margin: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+}
+
+header button:hover{
+    background-color: gray;
+}
