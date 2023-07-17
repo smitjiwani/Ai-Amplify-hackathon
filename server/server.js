@@ -1,4 +1,5 @@
 import express from "express";
+import routes from "./todos/routes.js"
 // import cors from "cors";
 // import pool from "./db.js";
 import db from "./db.js";
@@ -26,10 +27,7 @@ app.get("/", (req, res) => {
 // ROUTES
 
 // GET ALL TODOS
-app.get('/todos', async (req, res) => {
-  const todo = await db.select().from('todos')
-  res.json(todo)
-})
+app.use("/api/todos", routes)
 
 // // GET ONE TODO
 // app.get('/todos/:id', async (req, res) => {
@@ -40,7 +38,7 @@ app.get('/todos', async (req, res) => {
 // })
 
 // CREATE A TODO
-app.post("/todos", async(req,res)=>{
+app.post("/api/todos", async(req,res)=>{
   try{
     const newTodo = await db('todos').insert({ description: req.body.description }).returning('*')
     res.status(201).json(newTodo)
