@@ -8,12 +8,35 @@ const getTodos = async (req,res) => {
 }
 
 const getTodoById = async (req,res) => {
-  const id = ParseInt(req.paramds.id)
+  const id = parseInt(req.params.id)
   const todo = await db.select().from('todos').where('id', id)
   res.status(200).json(todo)
+}
+
+const addTodos = async (req,res) => {
+  try{
+    const newTodo = await db('todos').insert({ description: req.body.description }).returning('*')
+    res.status(201).json(newTodo)
+  }catch(err){
+    res.status(400).json({ message: err.message })
+    console.error(err.message)
+  }
+}
+
+const deleteTodo = async (req, res) => {
+  const id = parseInt(req.params.id)
+  try {
+    const delTodo = await db('todos').where('id', id).del().returning('*')
+    res.status(201).json(delTodo)
+  } catch (err) {
+    res.status(400).json({ messgae: err.message })
+    console.log(err.message)
+  }
 }
 
 export {
   getTodos,
   getTodoById,
+  addTodos,
+  deleteTodo
 }
