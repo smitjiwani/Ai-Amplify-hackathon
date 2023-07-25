@@ -7,6 +7,5 @@ export default knex({
     user: "username",
     password: "password",
     database: "username",
-    // port: "4321"
   },
 });

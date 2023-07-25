@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import "../styles/EditTodo.css"
 
 
 const EditTodo = ({ todo }) => {
@@ -30,12 +31,12 @@ const EditTodo = ({ todo }) => {
     }
   
     return (
-      <>
+      <div>
         <Button variant="primary" onClick={handleShow} data-target={`id${todo.id}`}>
           Edit Todo
         </Button>
   
-        <Modal show={show} onHide={handleClose} id={`id${todo.id}`}>
+        <Modal className='modal' show={show} onHide={handleClose} id={`id${todo.id}`}>
           <Modal.Header>
             <Modal.Title>Edit Todo</Modal.Title>
           </Modal.Header>
@@ -49,7 +50,7 @@ const EditTodo = ({ todo }) => {
             </Button>
           </Modal.Footer>
         </Modal>
-      </>
+      </div>
     );
 }
 
