@@ -30,7 +30,7 @@ docker-compose up -d
 Go to bash
 
 ```
-docker exec -it ai-amplify-hackathon-server-1 bash
+docker exec -it server bash
 ```
 
 Migrate
