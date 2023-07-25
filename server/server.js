@@ -1,4 +1,5 @@
 import express from "express";
+import todoRoutes from "./todos/routes.js"
 // import cors from "cors";
 // import pool from "./db.js";
 import db from "./db.js";
@@ -24,37 +25,7 @@ app.get("/", (req, res) => {
 })
 
 // ROUTES
-
-// GET ALL TODOS
-app.get('/todos', async (req, res) => {
-  const todo = await db.select().from('todos')
-  res.json(todo)
-})
-
-// // GET ONE TODO
-// app.get('/todos/:id', async (req, res) => {
-//   // TEST THIS req.params.id STUFF
-//   const id = req.params.id
-//   const todo = await db.select(id).from('todos')
-//   res.json(todo)
-// })
-
-// CREATE A TODO
-app.post("/todos", async(req,res)=>{
-  try{
-    const newTodo = await db('todos').insert({ description: req.body.description }).returning('*')
-    res.status(201).json(newTodo)
-    // const { description } = req.body;
-    // const newTodo = await db.query(
-    //     "INSERT INTO todo {description} VALUES($1)",
-    //     [description]
-    // );
-    // res.json(newTodo);
-  }catch(err){
-    res.status(400).json({ message: err.message })
-    console.error(err.message)
-  }
-})
+app.use("/api/todos", todoRoutes)
 
 // // UPDATE A TODO
 // app.put('/todos/:id', async (req, res) => {
