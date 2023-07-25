@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/ListTodo.css"
+import EditTodo from './EditTodo';
 
 // import { Axios } from 'axios'
 // import { METHODS } from 'http';
@@ -8,11 +9,11 @@ function ListTodo() {
 
     const [todos, setTodos] = useState([]);
 
-   // Delete todos
+    // Delete todos
 
-    const deleteTodo = async (id) =>{
+    const deleteTodo = async (id) => {
         try {
-            
+
             // console.log("delete works")
 
             const deleteTodo = await fetch(`api/todos/${id}`, {
@@ -25,6 +26,8 @@ function ListTodo() {
             console.error(err.message)
         }
     }
+
+    // Get todos
 
     const getTodos = async () => {
 
@@ -40,37 +43,33 @@ function ListTodo() {
 
     useEffect(() => {
         getTodos();
-    });
+    }, []);
 
     // console.log(todos)
 
     return (
         <div>
             <table>
-                <tr>
+                <thead>
                     <th>Checkbox</th>
                     <th>Description</th>
                     <th>Buttons</th>
-                </tr>
+                </thead>
 
                 {todos.map(todo => (
-                    // <tr>
-                     <tr key={todo.id}> 
+
+                    <tbody key={todo.id}>
                         <td><input type="checkbox" /></td>
                         <td>{todo.description}</td>
                         <td>
                             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-                            {/* <button>Delete</button> */}
-                            <button>Edit</button>
+
+                            <EditTodo todo={todo} />
                         </td>
-                    </tr>
+                    </tbody>
                 ))}
 
-                {/* <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                </tr> */}
+
             </table>
         </div>
     )

@@ -34,9 +34,20 @@ const deleteTodo = async (req, res) => {
   }
 }
 
+const updateTodo = async (req, res) => {
+  const id = parseInt(req.params.id)
+  try {
+    const updateTodo = await db('todos').where('id', id).update({ description: req.body.description }).returning('*')
+    res.status(201).json(updateTodo)
+  } catch (err) {
+    console.log(err.message)
+  }
+}
+
 export {
   getTodos,
   getTodoById,
   addTodos,
-  deleteTodo
+  deleteTodo,
+  updateTodo
 }
