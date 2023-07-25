@@ -68,10 +68,5 @@ docker-compose down
 ```
 
 
-## Contributors
 
-* Smit Jiwani
-* Prathamesh Gate
-* Himanshu Mishra
-* Ruturaj Chondekar
 
