@@ -1,4 +1,4 @@
-# Ai-Amplify-hackathon
+# Todo-app
 
 ## prequisites
 
